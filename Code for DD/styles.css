@@ -1,0 +1,633 @@
+/* ---------- Base Theme ---------- */
+:root {
+  --primary: #c8a2c8;       /* lilac */
+  --primary-dark: #a678a6;  /* deeper lilac */
+  --accent: #e6d6f2;        /* pale lavender */
+  --text: #333;
+  --background: #f9f6fc;
+  --white: #fff;
+  --muted: #777;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ---------- Navigation Bar ---------- */
+.navbar {
+  background-color: var(--primary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  display: block;
+  padding: 12px 18px;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: var(--primary-dark);
+}
+
+/* ---------- Section Layout ---------- */
+.section-padding {
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--primary-dark);
+}
+
+/* ---------- Hero Section ---------- */
+#hero {
+  background: linear-gradient(rgba(200, 162, 200, 0.6), rgba(200, 162, 200, 0.6)), url('banner-image.jpg') center/cover no-repeat;
+  color: var(--white);
+  text-align: center;
+  padding: 120px 20px;
+}
+
+#hero .subtitle {
+  font-weight: 300;
+  color: #f0e6f5;
+}
+
+/* ---------- Profile Photo ---------- */
+.profile-pic {
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* ---------- Notes List ---------- */
+.notes-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.notes-list a {
+  background-color: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.notes-list a:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.notes-list .na {
+  color: var(--muted);
+  font-style: italic;
+  padding: 10px 18px;
+  background-color: var(--accent);
+  border-radius: 8px;
+}
+
+/* ---------- Details Blocks ---------- */
+details {
+  margin: 12px 0;
+  padding: 12px;
+  background: var(--white);
+  border-left: 4px solid var(--primary);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+details[open] {
+  background: var(--accent);
+}
+
+/* ---------- Project Cards ---------- */
+.project-grid {
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 700px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  color: var(--primary-dark);
+}
+
+.card a {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-top: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.card a:hover {
+  background: var(--primary-dark);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 24px 0;
+  background: var(--primary-dark);
+  color: var(--white);
+  font-size: 0.95rem;
+  margin-top: 40px;
+}
+.design-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.design-list li {
+  background-color: #f3e8ff;
+  border-left: 5px solid #c8a2c8;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.design-list a {
+  color: #6a1b9a;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.design-list a:hover {
+  color: #4a0072;
+}
+/* Section container */
+#design-work {
+  background-color: #f9f6fc; /* soft lilac background */
+  color: #333;
+}
+
+/* Section title */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #a678a6; /* deeper lilac */
+  margin-bottom: 20px;
+}
+
+/* Description paragraph */
+#design-work p {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Design list styling */
+.design-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Each list item */
+.design-list li {
+  background-color: #e6d6f2; /* pale lavender */
+  border-left: 5px solid #c8a2c8; /* lilac accent */
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Link styling */
+.design-list a {
+  color: #6a1b9a;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effects */
+.design-list li:hover {
+  background-color: #d9c2e6;
+}
+
+.design-list a:hover {
+  color: #4a0072;
+  transform: translateY(-2px);
+}
+/* Section background and layout */
+#design-work {
+  background-color: #f5f0fa; /* soft lilac background */
+  padding: 60px 20px;
+  border-top: 4px solid #c8a2c8;
+}
+
+/* Section title */
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #8e44ad; /* rich purple */
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Description text */
+#design-work p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #5e5e5e;
+  margin-bottom: 40px;
+}
+
+/* Design list container */
+.design-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Each assignment card */
+.design-list li {
+  background-color: #e9d8f4;
+  border-left: 6px solid #b57edc;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for cards */
+.design-list li:hover {
+  background-color: #d9c2e6;
+  transform: translateY(-3px);
+}
+
+/* Link styling */
+.design-list a {
+  color: #6a1b9a;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Link hover effect */
+.design-list a:hover {
+  color: #4a0072;
+  border-bottom: 2px solid #4a0072;
+}
+/* ---------- Section Layout ---------- */
+.section-padding {
+  padding: 60px 20px;
+  background-color: #f5f0fa; /* soft lilac background */
+  border-top: 4px solid #c8a2c8;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ---------- Section Titles ---------- */
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #8e44ad; /* rich purple */
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* ---------- Section Description ---------- */
+.section-padding p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #5e5e5e;
+  margin-bottom: 40px;
+}
+
+/* ---------- List Styling for All Sections ---------- */
+ul.notes-list,
+ul.design-list,
+ul.project-list,
+ul.hobbies-list,
+ul.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ---------- Card Styling for Each Item ---------- */
+ul.notes-list li,
+ul.design-list li,
+ul.project-list li,
+ul.hobbies-list li,
+ul.skills-list li {
+  background-color: #e9d8f4;
+  border-left: 6px solid #b57edc;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* ---------- Hover Effects ---------- */
+ul.notes-list li:hover,
+ul.design-list li:hover,
+ul.project-list li:hover,
+ul.hobbies-list li:hover,
+ul.skills-list li:hover {
+  background-color: #d9c2e6;
+  transform: translateY(-3px);
+}
+
+/* ---------- Link Styling ---------- */
+ul.notes-list a,
+ul.design-list a,
+ul.project-list a {
+  color: #6a1b9a;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+ul.notes-list a:hover,
+ul.design-list a:hover,
+ul.project-list a:hover {
+  color: #4a0072;
+  border-bottom: 2px solid #4a0072;
+}
+
+/* ---------- Muted Text for N/A Items ---------- */
+.na {
+  color: #999;
+  font-style: italic;
+}
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-list li {
+  background-color: #e9d8f4;
+  border-left: 6px solid #b57edc;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.project-list li:hover {
+  background-color: #d9c2e6;
+  transform: translateY(-3px);
+}
+
+.project-list a {
+  color: #6a1b9a;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.project-list a:hover {
+  color: #4a0072;
+  border-bottom: 2px solid #4a0072;
+}
+.hobbies-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hobbies-list li {
+  background-color: #e9d8f4;
+  border-left: 6px solid #b57edc;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hobbies-list li:hover {
+  background-color: #d9c2e6;
+  transform: translateY(-3px);
+}
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skills-list li {
+  background-color: #e9d8f4;
+  border-left: 6px solid #b57edc;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.skills-list li:hover {
+  background-color: #d9c2e6;
+  transform: translateY(-3px);
+}
+/* Hero Section */
+#hero {
+  background-color: #f5f0fa;
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  color: #8e44ad;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.hero-tagline {
+  font-size: 1.2rem;
+  color: #5e5e5e;
+  font-weight: 400;
+}
+
+/* About Section */
+.about-container {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+.navbar {
+  background-color: #c8a2c8;
+  padding: 12px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-top: -20px; /* optional: adjust spacing */
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: #a678a6;
+}
+.standards-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  columns: 2; /* set to 3 if you prefer denser layout */
+  column-gap: 24px;
+}
+
+.standards-list li {
+  margin: 6px 0;
+}
+
+.standards-list input[type="checkbox"] {
+  margin-right: 8px;
+}
+.standards-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  columns: 2; /* split into two columns */
+  column-gap: 40px;
+}
+
+.standards-list li {
+  margin: 8px 0;
+  padding: 6px 10px;
+  background: #d336c6;
+  border-left: 4px solid #72085b;
+  border-radius: 6px;
+  font-size: 1rem;
+}
